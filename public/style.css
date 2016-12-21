@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+body {
+  font-family: 'Indie Flower', cursive;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin: 50px 0px;
+}
+
+h3 {
+  cursor: pointer;
+}
+
+.input {
+  border: none;
+  border-bottom: 2px solid black;
+  padding-left: 10px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.to-do-wrap {
+  width: 200px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid black;
+  border-radius: 5px;
+}

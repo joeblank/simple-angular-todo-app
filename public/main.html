@@ -1,18 +1,30 @@
-<form ng-submit='addNewItem(newItem)'>
-  <input ng-model='newItem' type="text" placeholder="type new to-do">
+<form ng-submit="addNewItem(newItem); newItem = '' ">
+  New to-do item: <input class='input' ng-model='newItem' type="text" placeholder="type new to-do">
 </form>
-<h1>Todo List:</h1>
-<h3
-ng-repeat='item in todoList track by $index'
-ng-click='passToInProgress(item, $index)'
->{{$index + 1}} - {{item}}</h3>
-<h1>In Progress:</h1>
-<h3
-ng-click='passToCompleted(item, $index)'
-ng-repeat='item in inProgressList track by $index'
->{{$index + 1}} - {{item}}</h3>
-<h1>Completed:</h1>
-<h3
-ng-click='deleteItem(item, index)'
-ng-repeat='item in completedList track by $index'
->{{$index + 1}} - {{item}}</h3>
+
+<section class='outer-container'>
+  <div class="to-do-wrap">
+    <h1>To-do List:</h1>
+    <h3
+    ng-repeat='item in todoList track by $index'
+    ng-click='passToInProgress(item, $index)'
+    >{{$index + 1}} - {{item}}</h3>
+  </div>
+
+  <div class="to-do-wrap">
+    <h1>In Progress:</h1>
+    <h3
+    ng-click='passToCompleted(item, $index)'
+    ng-repeat='item in inProgressList track by $index'
+    >{{$index + 1}} - {{item}}</h3>
+  </div>
+
+
+  <div class="to-do-wrap">
+    <h1>Completed:</h1>
+    <h3
+    ng-click='deleteItem(item, index)'
+    ng-repeat='item in completedList track by $index'
+    >{{$index + 1}} - {{item}}</h3>
+  </div>
+</section>

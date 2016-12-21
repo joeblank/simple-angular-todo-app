@@ -1,7 +1,7 @@
 angular.module('todo-app')
 .service('mainService', function($http, $q) {
 
-  this.todoList = ['apples'];
+  this.todoList = [];
   this.inProgressList = [];
   this.completedList = [];
 
@@ -17,7 +17,7 @@ angular.module('todo-app')
   this.passToCompleted = function(item, index) {
     this.completedList.push(item);
     this.inProgressList.splice(index, 1);
-    alert('your awesome joe!');
+    alert('You\'re awesome!');
   }
 
   this.deleteItem = function(item, index) {

@@ -5,8 +5,8 @@ $scope.todoList = mainService.todoList;
 $scope.inProgressList = mainService.inProgressList;
 $scope.completedList = mainService.completedList;
 
-$scope.addNewItem = function(newItem) {
-  mainService.addNewItem(newItem);
+$scope.addNewItem = function(item) {
+  mainService.addNewItem(item);
 }
 
 $scope.passToInProgress = function(item, index) {
